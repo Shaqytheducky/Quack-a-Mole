@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Mole Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="dark-overlay"></div>
+  <button id="restart-btn"></button>
+  <div class="game-container">
+    <img src="images/field.png" alt="Field" class="field" draggable="false" />
+    <div class="score-container">
+      <div id="timer">60</div>
+      <div id="sec-label">sec</div>
+      <div id="score">0</div>
+      <div id="pts-label">pts</div>
+    </div>
+    <div id="start-btn-bg"></div>
+    <button id="start-btn" class="invisible">START</button>
+    <div class="holes"></div>
+    <div id="game-over">
+      <div id="game-over-text">Time's up!</div>
+      <div id="final-score">
+        <div id="score-label">Your score is:</div>
+        <div id="score-value">0</div>
+      </div>
+      <div class="button-container">
+        <button id="share-btn"></button>
+        <button id="back-btn">Back to<br>the game</button>
+      </div>
+    </div>
+  </div>
+  <div class="title">Quack-a-Mole</div>
+  <div class="instructions">
+    ----------How to play:----------<br><br>
+    - Timer start at 60 sec.<br><br>
+    - Hit<br><br>
+    to score 1 point each.<br><br>
+    - Avoid<br><br>
+    takes away 2 points and 1 second.<br><br>
+    - Don't hit<br><br>
+    you lose 2 seconds and 1 point.<br><br>
+    - Find<br><br>
+    add 60 seconds to the timer!<br><br>
+    - After 50<br><br>
+    in a row you earn 10 extra seconds.
+  </div>
+  <img src="images/icons/chucky_icon.png" alt="Chucky Icon" class="chucky-icon" draggable="false" />
+  <img src="images/icons/egg_icon.png" alt="Egg Icon" class="egg-icon" draggable="false" />
+  <img src="images/icons/golden_egg_icon.png" alt="Golden Egg Icon" class="mole-icon" draggable="false" />
+  <img src="images/icons/mole_icon.png" alt="True Mole Icon" class="true-mole-icon" draggable="false" />
+  <img src="images/icons/mole_icon.png" alt="Mole2 Icon" class="mole2-icon" draggable="false" />
+  <div class="image-box"></div>
+  <div class="image-group">
+    <img src="images/icons/mole_icon.png" alt="Counter Mole Icon" class="counter-mole-icon" draggable="false" />
+    <div class="mole-counter">0</div>
+    <div class="mole-percentage">50%</div>
+    <img src="images/icons/chucky_icon.png" alt="Counter Chucky Icon" class="counter-chucky-icon" draggable="false" />
+    <div class="chucky-counter">0</div>
+    <div class="chucky-percentage">25%</div>
+    <img src="images/icons/egg_icon.png" alt="Counter Egg Icon" class="counter-egg-icon" draggable="false" />
+    <div class="egg-counter">0</div>
+    <div class="egg-percentage">24.90%</div>
+    <img src="images/icons/golden_egg_icon.png" alt="Counter Golden Egg Icon" class="counter-golden-egg-icon" draggable="false" />
+    <div class="golden-egg-counter">0</div>
+    <div class="golden-egg-percentage">0.10%</div>
+  </div>
+  <!-- Leaderboard -->
+  <div class="leaderboard">
+    <h2 class="leaderboard-title">Leaderboard</h2>
+    <table id="leaderboard-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>@</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="leaderboard-extra-box">
+      <p class="leaderboard-text">To be included in the leaderboard you must share the post at the end of the game on X with #QuackaMoleWithShaqy and the screenshot proof of the endgame. the leaderboard will be updated every week</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
