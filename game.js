@@ -121,7 +121,9 @@ holesContainer.addEventListener("dragstart", (e) => e.preventDefault());
 // Funzione per condividere su X
 function shareOnX() {
   const score = finalScoreDisplay.textContent;
-  const text = `Just played Quack-a-Mole and scored ${score} points! come to play and #QuackaMoleWithShaqy on https://shaqytheducky.lol`;
+  const text = `I just scored ${score} points by playing Quack-a-Mole!!!
+Come to play and #QuackaMoleWithShaqy on:
+https://shaqytheducky.lol/#quack-a-mole`;
   const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
   window.open(shareUrl, '_blank');
 }
